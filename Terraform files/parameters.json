@@ -1,0 +1,25 @@
+[{
+    'ParameterKey': 'StageName',
+    'ParameterValue': 'staging',
+    'UsePreviousValue': False
+}, {
+    'ParameterKey': 'EndpointInstanceCount',
+    'ParameterValue': '1',
+    'UsePreviousValue': False
+}, {
+    'ParameterKey': 'EndpointInstanceType',
+    'ParameterValue': 'ml.m5.large',
+    'UsePreviousValue': False
+}, {
+    'ParameterKey': 'SageMakerProjectName',
+    'ParameterValue': 'terraform-gitlab-pl',
+    'UsePreviousValue': False
+}, {
+    'ParameterKey': 'ModelPackageName',
+    'ParameterValue': 'arn:aws:sagemaker:us-east-1:544507241185:model-package/terraform-gitlab-pl-1118021/1',
+    'UsePreviousValue': False
+}, {
+    'ParameterKey': 'ModelExecutionRoleArn',
+    'ParameterValue': 'arn:aws:iam::544507241185:role/service-role/gitlab-mlops-role-dev',
+    'UsePreviousValue': False
+}]
