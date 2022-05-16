@@ -17,14 +17,17 @@ The following steps need to be complete before creating Gitlab projects.
 ### Instruction
 
 #### Step 1: Pass parameters
-Go to `Terraform files` folder to input your own parameters (such as AWS account ID, region, Gitlab repo name, S3 bucket name. etc.) in `variable.tf`.
+Go to `Terraform files` folder to input your own parameters (such as AWS account ID, region, Gitlab repo name, S3 bucket name. etc.) in:   
+`variable.tf`
 
 #### Step 2: Create secret and load seed files to S3
- Run `init.sh` to create zip files for the seedcode and Lambda functions and upload them to S3. Pass command line arguments for the S3 bucket name, secret name, and secret token for GitLab so that the Secrets Manager key can be created. The zip files created are:  
+ Run `./init.sh` (You may need to run `chmod +x init.sh` first to get execution permission)
+ 
+ It will create zip files for the seedcode and Lambda functions and upload them to S3. Pass command line arguments for the S3 bucket name, secret name, and secret token for GitLab so that the Secrets Manager key can be created. The zip files created are:  
     1. `zip_files/lambda-gitlab-pipeline-trigger.zip`  
     2. `zip_files/lambda-seedcode-checkin-gitlab.zip`  
     3. `zip_files/mlops-gitlab-project-seedcode-model-build.zip`  
-    4. `zip_files/mlops-gitlab-project-seedcode-model-deploy.zip`  
+    4. `zip_files/mlops-gitlab-project-seedcode-model-deploy.zip`    
 
 #### Step 3: Run Terraform code
 Go to `Terraform files`  folder,  Run the following commands in Terminal:  
