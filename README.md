@@ -48,5 +48,5 @@ Trigger the pipeline in the model build repository to start a SageMaker Pipeline
 Once the SageMaker Pipeline to train the model completes, a model will be added to the SageMaker Model Registry. If that model is approved (in this repo, model is automatically approved), the GitLab Pipeline in the model deploy repository will start and the model deployment process will begin. 
 A SageMaker Endpoint will be created with the suffix `-staging`. A manual step in the GitLab Pipeline is present to create an endpoint with the suffix `-production`. 
 
-
+----
 `Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. SPDX-License-Identifier: MIT-0`
