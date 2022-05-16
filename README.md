@@ -1,6 +1,6 @@
 # Use Terraform and GitLab CI/CD to Build MLOps Pipeline on Amazon SageMaker
 
-Terraform is an “infrastructure as code” tool similar to AWS CloudFormation that allows you to create, update, and version your Amazon Web Services (AWS) infrastructure. GitLab CI/CD is a tool for software development and can automatically build, test, deploy, and monitor your applications on AWS platform.
+Terraform is an “infrastructure as code” tool similar to AWS CloudFormation that allows you to create, update, and version your Amazon Web Services (AWS) infrastructure. GitLab CI/CD is a tool for software development and enable you automatically build, test, deploy, and monitor your applications on AWS platform.
 
 In this repository, Terraform and Gitlab CI/CD are used to deploy and orchestrate MLOps workflow on Amazon SageMaker platform. 
 
