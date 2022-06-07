@@ -19,6 +19,9 @@ With this MLOps architecture, users can use AWS partners' tools to build an ML C
 
 ![](img/Terraform_Gitlab_pipeline_v3.jpg)
 
+The diagram shows Terraform provisions AWS sources that include lambda functions, IAM service role, and CloudWatch Events. A lambda function will create two projects and repositories in Gitlab. Each Gitlab project includes a CI/CD pipeline, which orchestrate ML workflow on Amazon SageMaker via AWS CLI.  
+
+
 ---
 
 ### Prerequisites
