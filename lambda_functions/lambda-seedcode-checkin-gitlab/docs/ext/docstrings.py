@@ -2,6 +2,7 @@ import inspect
 import os
 
 import jinja2
+from jinja2 import Environment, select_autoescape
 import sphinx
 import sphinx.ext.napoleon as napoleon
 from sphinx.ext.napoleon.docstring import GoogleDocstring
@@ -36,7 +37,7 @@ def _process_docstring(app, what, name, obj, options, lines):
 
 class GitlabDocstring(GoogleDocstring):
     def _build_doc(self, tmpl, **kwargs):
-        env = jinja2.Environment(
+        env = jinja2.Environment(autoescape=jinja2.select_autoescape(['html', 'xml']),
             loader=jinja2.FileSystemLoader(os.path.dirname(__file__)), trim_blocks=False
         )
         env.filters["classref"] = classref
