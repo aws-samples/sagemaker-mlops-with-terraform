@@ -37,8 +37,11 @@ def _process_docstring(app, what, name, obj, options, lines):
 
 class GitlabDocstring(GoogleDocstring):
     def _build_doc(self, tmpl, **kwargs):
-        env = jinja2.Environment(autoescape=jinja2.select_autoescape(['html', 'xml']),
-            loader=jinja2.FileSystemLoader(os.path.dirname(__file__)), trim_blocks=False
+        env = jinja2.Environment(
+            autoescape=jinja2.select_autoescape(
+                enabled_extensions=("html", "xml"),
+                default_for_string=True,
+            )
         )
         env.filters["classref"] = classref
         template = env.get_template(tmpl)
